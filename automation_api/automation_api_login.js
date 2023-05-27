@@ -41,7 +41,7 @@ describe("POST /login", function () { // JUDUL, JADI SINGKAT AJA
   it("Verify Failed Login with invalid email and valid password", async function () { 
     const response = await request_url 
       .post("/login")
-      .send({ email: "barru.kurniawan", password: "testerjago" });
+      .send({ email: "wuri.munthe", password: "54321" });
 
     const isi_data = response.body;
 
@@ -52,7 +52,7 @@ describe("POST /login", function () { // JUDUL, JADI SINGKAT AJA
   it("Verify Failed Login with random email and valid password", async function () { 
     const response = await request_url 
       .post("/login")
-      .send({ email: "barru.asdajsdasdasd@bkabka.com", password: "testerjago" });
+      .send({ email: "wuri.asdajsdasdasd@bkabka.com", password: "12345" });
 
     const isi_data = response.body;
 
@@ -63,7 +63,7 @@ describe("POST /login", function () { // JUDUL, JADI SINGKAT AJA
   it("Verify Failed Login with phone number and valid password", async function () { 
     const response = await request_url 
       .post("/login")
-      .send({ email: "088823772363", password: "testerjago" });
+      .send({ email: "088823772363", password: "12345689" });
 
     const isi_data = response.body;
 
@@ -75,7 +75,7 @@ describe("POST /login", function () { // JUDUL, JADI SINGKAT AJA
   it("Verify Failed Login with username and valid password", async function () { 
     const response = await request_url 
       .post("/login")
-      .send({ email: "barrukurniawan", password: "testerjago" });
+      .send({ email: "wurimunthe", password: "testerjago" });
 
     const isi_data = response.body;
 
